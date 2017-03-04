@@ -1,13 +1,26 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <div v-if="error">
+      <p> {{ error }}</p>
+    </div>
     <router-view></router-view>
+    <lightroom></lightroom>
   </div>
 </template>
 
 <script>
+import Lightroom from './components/lightroom'
+
 export default {
-  name: 'app'
+  name: 'app',
+
+  computed: {
+    error () {
+      return this.$store.state.error
+    }
+  },
+
+  components: { Lightroom }
 }
 </script>
 
