@@ -120,7 +120,7 @@ figure {
   margin: 0;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 959px) {
   .photo {
     max-width: 33%;
   }
@@ -136,9 +136,17 @@ figure {
   }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 680px) {
   .photo {
     max-width: 50%;
+  }
+}
+
+@media (max-width: 468px) {
+  .photo {
+    max-width: 100%;
+    margin: 10px 0;
+    border-bottom: 1px solid rgba(44, 62, 80, .2);
   }
 }
 </style>
