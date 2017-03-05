@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Lightroom from './components/lightroom'
+import Lightroom from './components/Lightroom'
 
 export default {
   name: 'app',
