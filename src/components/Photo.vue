@@ -60,6 +60,7 @@ figure {
 }
 
 .photo {
+  flex-basis: 25%;
   max-width: 25%;
   height: auto;
   padding: 10px;
@@ -70,10 +71,6 @@ figure {
 
 .photo__selected {
   opacity: .5;
-}
-
-.photo__container {
-  height: 110%;
 }
 
 .photo__wrapper {
@@ -89,6 +86,10 @@ figure {
   top: 5%;
   width: 50%;
   left: 25%;
+}
+
+.photo__select:disabled {
+  cursor: normal;
 }
 
 .photo:hover .photo__caption {
@@ -122,6 +123,7 @@ figure {
 
 @media (max-width: 959px) {
   .photo {
+    flex-basis: 33%;
     max-width: 33%;
   }
 
@@ -138,12 +140,14 @@ figure {
 
 @media (max-width: 680px) {
   .photo {
+  flex-basis: 50%;
     max-width: 50%;
   }
 }
 
 @media (max-width: 468px) {
   .photo {
+    flex-basis: 100%;
     max-width: 100%;
     margin: 10px 0;
     border-bottom: 1px solid rgba(44, 62, 80, .2);

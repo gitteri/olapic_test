@@ -15,7 +15,6 @@ var getBody = function (req) {
   })
 }
 
-app.use(express.static('dist'))
 
 app.post('/', function (req, res) {
   getBody(req).then(function (data) {
@@ -23,6 +22,8 @@ app.post('/', function (req, res) {
       try {
         var token = data.split('payload=')[1]
         var decoded = jwt.verify(token, 'secret')
+
+        app.use(express.static('dist'))
         res.sendFile(path.join(__dirname + '/dist/index.html'));
       } catch(err) {
         res.send('Sorry the token cannot be verified')
